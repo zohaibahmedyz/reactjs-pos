@@ -15,10 +15,6 @@ app.use(bodyParser.json())
 
 app.use('/products',productRoute)
 
-app.get('/', (req,res)=>{
-    res.send("we are on GET")
-})
-
 mongoose.connect(process.env.MONGODB_URI ||
     process.env.DB_CONNECTION,
     {useNewUrlParser : true, useUnifiedTopology: true }
